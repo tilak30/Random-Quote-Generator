@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-
+import "./MainPage.css";
 
 function MainPage({author, quote, field}) {
     let history = useHistory();
@@ -13,8 +13,8 @@ function MainPage({author, quote, field}) {
                     </div>
                 </div>
             </div>
-            <div style={{display:"flex", flexDirection:"column", justifyContent:"center",marginLeft:"25%", marginTop:"5%"}}>
-                <div style={{fontSize:"24px", fontWeight:"bold", color:"#4F4F4F"}}>
+            <div className="author" style={{display:"flex", flexDirection:"column", width:"45%", height:"15vh", paddingLeft:"50px", justifyContent:"center",marginLeft:"25%", marginTop:"5%"}}>
+                <div className="authorname">
                     {author}
                 </div>
                 <div style={{fontSize:"14px", fontWeight:"500", color:"#828282"}}>

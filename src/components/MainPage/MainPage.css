@@ -1,0 +1,14 @@
+.author:hover{
+    background-color: black;
+}
+.author:hover .authorname{
+    color: #F2F2F2;
+}
+.authorname{
+    font-size: 24px;
+    font-weight: bold;
+    color: #4F4F4F;
+}
+.author{
+    width: 30%;
+}

@@ -25,7 +25,7 @@ function App() {
         <Link to='/' style={{ textDecoration: 'none' }}>
           <div onClick={handleClick} className="header" style={{display:"flex", width:"100%", justifyContent:"end", marginRight:"10px", marginTop:"10px"}}>
             <div style={{paddingRight:"10px", fontSize:"20px"}}>random</div>
-            <img style={{paddingRight:"10px", height:"22px"}} src="https://img.icons8.com/ios-glyphs/50/000000/refresh--v2.png"/>
+            <img style={{paddingRight:"10px", height:"22px"}} src="https://img.icons8.com/ios-glyphs/50/000000/refresh--v2.png" alt="loader"/>
           </div>
         </Link>
         <Switch>

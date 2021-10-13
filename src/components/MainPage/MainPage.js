@@ -23,7 +23,7 @@ function MainPage({author, quote, field}) {
                             {field}
                         </div>
                     </div>
-                    <img style={{height: "20px"}} src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-3.png"/>
+                    <img style={{height: "20px"}} src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-3.png" alt="arrow"/>
                 </div> 
             </Link>           
         </div>

@@ -11,7 +11,7 @@ function QuoteAuthor({author}) {
           setData(res.data.data);
       })
       .catch((error) => console.log(error))
-  }, [])
+  })
 
 
   return (

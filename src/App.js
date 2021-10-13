@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage";
 import QuoteAuthor from "./components/QuoteAuthor/QuoteAuthor";
 
@@ -9,7 +9,7 @@ function App() {
   const [field, setField] = useState("business");
 
   const handleClick = () => {
-
+    
     fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random")
       .then((res) => res.json())
       .then((data) => {
@@ -22,10 +22,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <div onClick={handleClick} className="header" style={{display:"flex", width:"100%", justifyContent:"end", marginRight:"10px", marginTop:"10px"}}>
-          <div style={{paddingRight:"10px", fontSize:"20px"}}>random</div>
-          <img style={{paddingRight:"10px", height:"22px"}} src="https://img.icons8.com/ios-glyphs/50/000000/refresh--v2.png"/>
-        </div>
+        <Link to='/' style={{ textDecoration: 'none' }}>
+          <div onClick={handleClick} className="header" style={{display:"flex", width:"100%", justifyContent:"end", marginRight:"10px", marginTop:"10px"}}>
+            <div style={{paddingRight:"10px", fontSize:"20px"}}>random</div>
+            <img style={{paddingRight:"10px", height:"22px"}} src="https://img.icons8.com/ios-glyphs/50/000000/refresh--v2.png"/>
+          </div>
+        </Link>
         <Switch>
           <Route exact path="/" >
             <MainPage author={author} quote={quote} field={field} />

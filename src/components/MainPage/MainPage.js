@@ -1,8 +1,8 @@
-import { useHistory } from "react-router";
 import "./MainPage.css";
+import { Link } from "react-router-dom";
+
 
 function MainPage({author, quote, field}) {
-    let history = useHistory();
 
     return (
         <div className="App" >
@@ -13,17 +13,19 @@ function MainPage({author, quote, field}) {
                     </div>
                 </div>
             </div>
-            <div className="author" style={{display:"flex", justifyContent: "space-between", alignItems:"center", width:"45%", height:"15vh", paddingLeft:"50px", paddingRight:"25px", marginLeft:"25%", marginTop:"5%"}}>
-                <div  style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
-                    <div className="authorname">
-                        {author}
+            <Link to="/AuthorQuote" style={{ textDecoration: 'none' }}>
+                <div className="author" style={{display:"flex", justifyContent: "space-between", alignItems:"center", width:"45%", height:"15vh", paddingLeft:"50px", paddingRight:"25px", marginLeft:"25%", marginTop:"5%"}}>
+                    <div  style={{display:"flex", flexDirection:"column", justifyContent:"center"}}>
+                        <div className="authorname">
+                            {author}
+                        </div>
+                        <div style={{fontSize:"14px", fontWeight:"500", color:"#828282", paddingTop:"5px"}}>
+                            {field}
+                        </div>
                     </div>
-                    <div style={{fontSize:"14px", fontWeight:"500", color:"#828282", paddingTop:"5px"}}>
-                        {field}
-                    </div>
-                </div>
-                <img style={{height: "20px"}} src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-3.png"/>
-            </div>            
+                    <img style={{height: "20px"}} src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-arrow-arrows-those-icons-lineal-color-those-icons-3.png"/>
+                </div> 
+            </Link>           
         </div>
     );
 }
